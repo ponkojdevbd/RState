@@ -38,7 +38,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <button className="hidden md:block cursor-pointer bg-white px-8 py-2 rounded">
+        <button className="hidden md:block cursor-pointer bg-white hover:bg-white/80 px-8 py-2 rounded">
           Sign up
         </button>
       </div>
