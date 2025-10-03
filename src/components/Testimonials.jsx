@@ -4,7 +4,7 @@ import { assets, testimonialsData } from "../assets/assets";
 const Testimonials = () => {
   return (
     <div
-      className="container flex flex-col items-center justify-center mx-auto p-6 md:px-10 lg:px-16 xl:px-32 w-full"
+      className="container flex flex-col items-center justify-center mx-auto p-6 py-10 lg:px-16 xl:px-32 w-full overflow-hidden"
       id="Testimonials"
     >
       {/* Section Heading */}
