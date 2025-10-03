@@ -19,6 +19,7 @@ const About = () => {
           Passionate About Properties, Dedicated to Your Vission
         </p>
       </div>
+
       {/* Section Content */}
       <div className=" flex flex-col md:flex-row items-center md:items-start md:gap-20">
         <img
