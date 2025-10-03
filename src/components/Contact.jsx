@@ -5,7 +5,7 @@ import { MdCall } from "react-icons/md";
 const Contact = () => {
   return (
     <div
-      className="text-center p-6 py-20 lg:px-32  w-full overflow-hidden"
+      className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
       id="Contact"
     >
       {/* Section Heading */}
@@ -54,49 +54,51 @@ const Contact = () => {
             ></textarea>
           </div>
         </div>
-        <button
-          className="bg-blue-600 text-white py-2 px-12 rounded mt-2 mb-10 text-start"
-          type="submit"
-        >
-          Send Message
-        </button>
-      </form>
 
-      {/* Other Contact */}
-      <div className="w-full md:max-w-2xl mx-auto flex items-center justify-center gap-2 md:gap-4 text-gray-600 ">
-        <p className="text-base md:text-lg">You May also Connect :</p>
-        <div className=" flex items-center justify-between gap-2">
-          <a
-            href="https://www.ponkojmondol.top"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="w-full flex flex-col md:flex-row-reverse items-center justify-between gap-4 md:gap-2 pt-4  ">
+          <button
+            className="bg-blue-600 text-white py-2 px-8 rounded text-start"
+            type="submit"
           >
-            <FaGlobe size={18} />
-          </a>
-          <a
-            href="https://www.facebook.com/ponkoj.mondol.bd"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebookF size={18} />
-          </a>
+            Send Message
+          </button>
+          {/* Other Contact */}
+          <div className=" flex items-center justify-center gap-2 md:gap-4 text-gray-600 ">
+            <p className="text-base md:text-lg">You May also Connect :</p>
+            <div className=" flex items-center justify-between gap-2">
+              <a
+                href="https://www.ponkojmondol.top"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGlobe size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/ponkoj.mondol.bd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF size={18} />
+              </a>
 
-          <a
-            href="https://wa.me/+8801833044436"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp size={20} />
-          </a>
-          <a
-            href="tel:+8801833044436"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MdCall size={20} />
-          </a>
+              <a
+                href="https://wa.me/+8801833044436"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp size={20} />
+              </a>
+              <a
+                href="tel:+8801833044436"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MdCall size={20} />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
