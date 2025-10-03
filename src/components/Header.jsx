@@ -13,7 +13,7 @@ const Header = () => {
         <h2 className=" text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
           Explore homes that fit your dreams
         </h2>
-        <div className="flex items-center justify-center gap-6 mt-16">
+        <div className="flex  items-center justify-center gap-4 mt-16">
           <button className="po_btn po_btn_border ">
             <a href="#Projects">Projects</a>
           </button>

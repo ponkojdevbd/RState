@@ -68,8 +68,9 @@ const Navbar = () => {
       <div
         className={`md:hidden ${
           showMobileMenu ? "fixed w-full" : "h-0 w-0"
-        }  top-0 right-0 bottom-0 overflow-hidden bg-white transition-all`}
+        } top-0 right-0 bottom-0 overflow-hidden bg-white transition-all`}
       >
+        {/* close icon*/}
         <div className="flex justify-end p-6 cursor-pointer">
           <img
             onClick={() => setShowMobileMenu(false)}
@@ -78,6 +79,8 @@ const Navbar = () => {
             alt="Close"
           />
         </div>
+
+        {/* navlinks */}
         <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
           <li>
             <a
