@@ -1,8 +1,36 @@
 import React from "react";
 import { FaFacebookF, FaGlobe, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "20e7aeea-835e-4c01-bae2-6ada5a458ad6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+      toast.success("Form Submitted Successfully");
+
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      toast.error(data.message);
+      setResult("");
+    }
+  };
   return (
     <div
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
@@ -22,7 +50,10 @@ const Contact = () => {
       </div>
 
       {/* Contact form */}
-      <form className="max-w-2xl mx-auto text-gray-600 pt-8">
+      <form
+        onSubmit={onSubmit}
+        className="max-w-2xl mx-auto text-gray-600 pt-8"
+      >
         <div className="flex flex-wrap">
           <div className=" w-full md:w-1/2 text-left">
             Your Name
@@ -60,7 +91,7 @@ const Contact = () => {
             className="bg-blue-600 text-white py-2 px-8 rounded text-start"
             type="submit"
           >
-            Send Message
+            {result ? result : "Send Message"}
           </button>
           {/* Other Contact */}
           <div className=" flex items-center justify-center gap-2 md:gap-4 text-gray-600 ">
