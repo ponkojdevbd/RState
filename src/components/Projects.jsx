@@ -4,10 +4,15 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { assets, projectsData } from "../assets/assets";
+import { motion } from "motion/react";
 
 const Projects = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="container flex flex-col items-center justify-center mx-auto p-6 py-10 lg:px-16 xl:px-32 w-full overflow-hidden"
       id="Projects"
     >
@@ -77,7 +82,7 @@ const Projects = () => {
           <img src={assets.right_arrow} alt="Next" className="w-5 h-5" />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
