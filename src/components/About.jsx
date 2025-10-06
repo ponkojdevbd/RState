@@ -26,11 +26,11 @@ const About = () => {
       </div>
 
       {/* Section Content */}
-      <div className=" flex flex-col md:flex-row items-center md:items-start md:gap-20">
+      <div className=" flex flex-col md:flex-row items-center md:items-start md:justify-between md:gap-10 lg:gap-20">
         <img
           src={assets.brand_img}
           alt="About"
-          className=" w-full sm:w-1/2 max-w-lg"
+          className=" w-full md:w-1/2 max-w-lg"
         />
         <div className=" flex flex-col items-center md:items-start mt-10 text-gray-600 ">
           <div className=" grid grid-cols-2 gap-6 md:gap-10 w-full 2xl:pr-28 ">

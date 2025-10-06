@@ -1,7 +1,35 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { toast } from "react-toastify";
 
 const Footer = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Subscribing....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "20e7aeea-835e-4c01-bae2-6ada5a458ad6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+      toast.success("Thanks for Subscription");
+
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      toast.error(data.message);
+      setResult("");
+    }
+  };
   const currentYear = new Date().getFullYear();
   return (
     <div
@@ -50,16 +78,23 @@ const Footer = () => {
           <p className="text-gray-400 mb-4 max-w-80">
             The latest newes, articals, and resources send to your inbox weekly.
           </p>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full md:w-auto p-2 rounded bg-gray-800 text-gray-400 border border-gray-700 focus:outline-none "
-            />
-            <button className="py-2 px-4 rounded bg-blue-600 hover:bg-blue-800 cursor-pointer text-white tarnsition-all duration-200 ease-in-out">
-              Subscribe
-            </button>
-          </div>
+          <form onSubmit={onSubmit}>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="w-full md:w-auto p-2 rounded bg-gray-800 text-gray-400 border border-gray-700 focus:outline-none"
+                required
+              />
+              <button
+                type="submit"
+                className="py-2 px-4 rounded bg-blue-600 hover:bg-blue-800 cursor-pointer text-white tarnsition-all duration-200 ease-in-out"
+              >
+                {result ? result : "Subscribe"}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
