@@ -56,7 +56,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="w-full md:w-auto p-2 rounded bg-gray-800 text-gray-400 border border-gray-700 focus:outline-none "
             />
-            <button className=" py-2 px-4 rounded bg-blue-500 text-white">
+            <button className="py-2 px-4 rounded bg-blue-600 hover:bg-blue-800 cursor-pointer text-white tarnsition-all duration-200 ease-in-out">
               Subscribe
             </button>
           </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               href="http://www.ponkojmondol.top"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary/50 font-medium ml-1"
+              className="text-primary/60 hover:text-white/50 font-medium ml-1 transition-all duration-200 ease-in-out"
             >
               Ponkoj Mondol
             </a>

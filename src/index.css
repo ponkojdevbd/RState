@@ -4,15 +4,12 @@
 /* Tailwind css */
 @import "tailwindcss";
 
-
-
 @theme {
   --color-primary: oklch(62.3% 0.214 259.815);
 }
 
 * {
   font-family: "Outfit", sans-serif;
-  /* transition: all 0.2s ease-in-out; */
   scroll-behavior: smooth;
 }
 
@@ -21,6 +18,8 @@
 .po_btn {
   padding: 0.75rem 2rem;
   border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+
 }
 
 @media screen and (max-width: 400px) {

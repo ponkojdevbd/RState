@@ -53,7 +53,7 @@ const Projects = () => {
       >
         {projectsData.map((project, idx) => (
           <SwiperSlide key={idx}>
-            <div className="relative bg-white rounded-lg shadow-md flex flex-col transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+            <div className="relative bg-white rounded-lg shadow-md flex flex-col transition-transform duration-200 hover:scale-[1.01] hover:shadow-lg">
               <img
                 src={project.image}
                 alt={project.title}

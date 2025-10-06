@@ -38,7 +38,7 @@ const Contact = () => {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
+      className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden "
       id="Contact"
     >
       {/* Section Heading */}
@@ -93,7 +93,7 @@ const Contact = () => {
 
         <div className="w-full flex flex-col md:flex-row-reverse items-center justify-between gap-4 md:gap-2 pt-4  ">
           <button
-            className="bg-blue-600 text-white py-2 px-8 rounded text-start"
+            className=" text-white py-2 px-8 rounded text-start cursor-pointer bg-blue-600 hover:bg-blue-800 tarnsition-all duration-200 ease-in-out"
             type="submit"
           >
             {result ? result : "Send Message"}

@@ -25,7 +25,7 @@ const Header = () => {
             <a href="#Projects">Projects</a>
           </button>
 
-          <button className="po_btn po_btn_background">
+          <button className="po_btn po_btn_background ">
             <a className=" " href="#Contact">
               Contact Us
             </a>

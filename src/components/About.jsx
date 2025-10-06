@@ -60,7 +60,7 @@ const About = () => {
               architecto minus error nesciunt accusantium repudiandae, nihil.
             </p>
           </div>
-          <button className=" bg-blue-600 text-white px-8 py-2 rounded cursor-pointer">
+          <button className=" bg-blue-600 hover:bg-blue-800 text-white px-8 py-2 rounded cursor-pointer transition-all duration-200 ease-in-out">
             Learn More
           </button>
         </div>

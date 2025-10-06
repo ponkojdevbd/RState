@@ -24,19 +24,25 @@ const Navbar = () => {
         <div className="">
           <ul className=" hidden md:flex gap-7 items-center justify-between text-white">
             <li>
-              <a href="#Header" className=" cursor-pointer hover:text-gray-400">
+              <a
+                href="#Header"
+                className=" cursor-pointer hover:text-gray-400 transition-all duration-200 ease-in-out"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#About" className=" cursor-pointer hover:text-gray-400">
+              <a
+                href="#About"
+                className=" cursor-pointer hover:text-gray-400 transition-all duration-200 ease-in-out"
+              >
                 About
               </a>
             </li>
             <li>
               <a
                 href="#Projects"
-                className=" cursor-pointer hover:text-gray-400"
+                className=" cursor-pointer hover:text-gray-400 transition-all duration-200 ease-in-out"
               >
                 Projects
               </a>
@@ -44,14 +50,14 @@ const Navbar = () => {
             <li>
               <a
                 href="#Testimonials"
-                className=" cursor-pointer hover:text-gray-400"
+                className=" cursor-pointer hover:text-gray-400 transition-all duration-200 ease-in-out"
               >
                 Testimonials
               </a>
             </li>
           </ul>
         </div>
-        <button className="hidden md:block cursor-pointer bg-white hover:bg-white/80 px-8 py-2 rounded">
+        <button className="hidden md:block cursor-pointer bg-white hover:bg-white/80 px-8 py-2 rounded transition-all duration-200 ease-in-out">
           Sign up
         </button>
 
